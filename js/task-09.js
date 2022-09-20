@@ -4,7 +4,7 @@ return `#${Math.floor(Math.random() * 16777215)
 .padStart(6, 0)}`;
 }
 
-const fone = document.querySelector("div")
+const fone = document.querySelector("body")
 const button = document.querySelector("button")
 const text = document.querySelector("span")
 console.log(fone)

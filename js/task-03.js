@@ -20,4 +20,5 @@ const galleryCollection = images.reduce(
 );
 const list = document.querySelector('.gallery');
 list.insertAdjacentHTML("afterbegin", galleryCollection)
-list.setAttribute("style", "list-style-type:none; display: flex;")
+list.setAttribute("style", "list-style-type:none; display: flex; justify-content: space-around;")
+
