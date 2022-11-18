@@ -1,21 +1,21 @@
-const form = document.querySelector("form")
-console.dir(form)
-form.addEventListener("submit", handleSubmit);
-function handleSubmit(event) {
-  event.preventDefault();
+const form = document.querySelector('form')
+form.addEventListener("submit", onSubmit)
+
+function onSubmit(e) {
+  e.preventDefault();
   const {
     elements: { email, password }
-  } = event.currentTarget;
-  if (email.value === '' || password.value === '') {
-  return alert("Всі поля мають бути заповнені")
+  } = e.currentTarget;
+
+  if (password.value === '' || email.value === '') {
+    alert("Enter your email and password!")
   }
-  const formData = new FormData(event.currentTarget)
-  formData.forEach((value, name) => {
-  })
-  const formObject = {
+
+  const objectForValid = {
     email: email.value,
     password: password.value,
   }
-  console.log(formObject)
+  console.log(objectForValid)
+
   form.reset();
 }

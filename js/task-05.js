@@ -1,11 +1,10 @@
-
-let input = document.getElementById("name-input");
-let nameOutput = document.getElementById("name-output");
-
-input.oninput = function () {
-    if (input.value === '') {
-       nameOutput.innerHTML = 'Anonymous';
-    } else{
-    nameOutput.innerHTML = input.value;
+const input = document.querySelector('input')
+console.log(input)
+const output = document.querySelector('h1')
+console.log(output)
+input.addEventListener("input", (e) => {
+    output.textContent = e.currentTarget.value;
+    if (e.currentTarget.value === '') {
+        output.textContent = "Hello, Anonymous!"
     }
-}
+})

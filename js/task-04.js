@@ -1,22 +1,23 @@
 const button = {
-    sub: document.querySelector("[data-action='increment']"),
+    inc: document.querySelector("[data-action='increment']"),
     add: document.querySelector("[data-action='decrement']"),
     span: document.querySelector("#value")
 }
+console.log(button.span.textContent)
+button.inc.addEventListener("click", onClickInc)
+button.add.addEventListener("click", onClickAdd)
 
-let totalValue = 0;
-const increment = (evt) => {
-    totalValue += 1
-    button.span.textContent = totalValue;
-};
-const decrement = (evt) => {
-    totalValue -= 1
+let value = 0
+console.log(value)
 
-    button.span.textContent = totalValue;
-};
-
-button.sub.addEventListener("click", increment);
-button.add.addEventListener("click", decrement);
+function onClickAdd(e) {
+    value -= 1
+    button.span.textContent = value
+}
+function onClickInc(e) {
+        value += 1
+    button.span.textContent = value
+}
 
 
 
